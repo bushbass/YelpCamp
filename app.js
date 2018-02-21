@@ -17,7 +17,6 @@ var campgroundRoutes = require('./routes/campgrounds');
 var indexRoutes = require('./routes/index');
 
 mongoose.connect(process.env.DATABASEURL);
-console.log(process.env.DATABASEURL)
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
