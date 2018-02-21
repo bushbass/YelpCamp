@@ -16,8 +16,9 @@ var commentRoutes = require('./routes/comments');
 var campgroundRoutes = require('./routes/campgrounds');
 var indexRoutes = require('./routes/index');
 
-mongoose.connect("process.env.DATABASE_URL");
-//just testing something, this comment should be deleted
+mongoose.connect(process.env.DATABASEURL);
+console.log(process.env.DATABASEURL)
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
